@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function Navbar() {
+function Navbar(prop) {
   return (
     <div className="bg-gray-100 font-sans w-full m-0">
       <div className="bg-white shadow">
@@ -20,30 +20,34 @@ function Navbar() {
             </div>
 
             <div className="hidden sm:flex sm:items-center">
-              <a
+              <button
+                onClick={() => prop.setCurrentPage("About Me")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 About Me
-              </a>
-              <a
+              </button>
+              <button
+                onClick={() => prop.setCurrentPage("Portfolio")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 Portfolio
-              </a>
-              <a
+              </button>
+              <button
+                onClick={() => prop.setCurrentPage("Contact")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 Contact
-              </a>
-              <a
+              </button>
+              <button
+                onClick={() => prop.setCurrentPage("Resume")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600"
               >
                 Resume
-              </a>
+              </button>
             </div>
 
             <div className="sm:hidden cursor-pointer">
