@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function Navbar(prop) {
+function Navbar({ setCurrentPage }) {
   return (
     <div className="bg-gray-100 font-sans w-full m-0">
       <div className="bg-white shadow">
@@ -21,28 +21,28 @@ function Navbar(prop) {
 
             <div className="hidden sm:flex sm:items-center">
               <button
-                onClick={() => prop.setCurrentPage("About Me")}
+                onClick={() => setCurrentPage("About Me")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 About Me
               </button>
               <button
-                onClick={() => prop.setCurrentPage("Portfolio")}
+                onClick={() => setCurrentPage("Portfolio")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 Portfolio
               </button>
               <button
-                onClick={() => prop.setCurrentPage("Contact")}
+                onClick={() => setCurrentPage("Contact")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 Contact
               </button>
               <button
-                onClick={() => prop.setCurrentPage("Resume")}
+                onClick={() => setCurrentPage("Resume")}
                 href="/"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600"
               >
