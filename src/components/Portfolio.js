@@ -2,12 +2,11 @@ import Card from "./Card";
 
 function Portfolio() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="flex-col space-x-4">
       Portfolio
-      <Card projectName="Project 1" />
-      <Card projectName="Project 2" />
-      <Card projectName="Project 3" />
+      <Card projectName="Project 1" desc="put description here" />
+      <Card projectName="Project 2" desc="put desc 2 here" />
+      <Card projectName="Project 3" desc="put desc 3 here" />
     </div>
   );
 }

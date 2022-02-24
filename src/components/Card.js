@@ -1,10 +1,10 @@
 import cardImage from "../images/image-01.jpg";
 
-function Card({ projectName }) {
+function Card({ projectName, desc }) {
   return (
     <div>
       <a
-        href="#"
+        href="/"
         className="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <img
@@ -17,8 +17,7 @@ function Card({ projectName }) {
             {projectName}
           </h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
+            {desc}
           </p>
         </div>
       </a>
