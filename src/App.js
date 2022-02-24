@@ -21,9 +21,11 @@ function App() {
   const [currPage, setCurrentPage] = useState("AboutMe");
 
   return (
-    <div className="flex-col">
-      <Navbar setCurrentPage={setCurrentPage} />
-      {getMainComponent(currPage)}
+    <div className="flex justify-center">
+      <div>
+        <Navbar setCurrentPage={setCurrentPage} />
+        {getMainComponent(currPage)}
+      </div>
     </div>
   );
 }
