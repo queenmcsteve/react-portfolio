@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
@@ -24,7 +25,8 @@ function App() {
     <div className="flex justify-center">
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
-        {getMainComponent(currPage)}
+        <div className="w-50">{getMainComponent(currPage)}</div>
+        <Footer />
       </div>
     </div>
   );

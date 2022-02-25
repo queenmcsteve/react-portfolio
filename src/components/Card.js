@@ -1,6 +1,6 @@
-import cardImage from "../images/image-01.jpg";
+import cardImage from "../assets/image-01.jpg";
 
-function Card({ projectName, desc }) {
+function Card({ projectName, projectImage, projectDesc }) {
   return (
     <div>
       <a
@@ -9,7 +9,7 @@ function Card({ projectName, desc }) {
       >
         <img
           className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-          src={cardImage}
+          src={projectImage}
           alt=""
         />
         <div className="flex flex-col justify-between p-4 leading-normal">
@@ -17,7 +17,7 @@ function Card({ projectName, desc }) {
             {projectName}
           </h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {desc}
+            {projectDesc}
           </p>
         </div>
       </a>

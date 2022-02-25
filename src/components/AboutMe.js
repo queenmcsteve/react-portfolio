@@ -1,30 +1,37 @@
+import profilePic from "../assets/profile.jpg";
+
 function AboutMe() {
   return (
     <div>
-      About Me
-      <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
-          <div class="max-h-96 md:h-screen">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+          <div className="mb-auto mt-auto">
+            <h1 className="text-3xl uppercase">Niko de Silva</h1>
+            <p className="font-semibold mb-5">
+              Learning Designer & Web Developer
+            </p>
+            <p>
+              Curious, creative, and dedicated Learning Designer with a
+              background in economics and exceptional communication skills. A
+              strong believer in learning by doing, I've developed my analytical
+              abilities while designing courses in diverse disciplines—including
+              entrepreneurial finance, marketing, data analytics, organization
+              science, and strategy—at Germany's top business school. I am an
+              accomplished and multifaceted writer and editor, with relevant
+              experience in academia and Berlin's startup ecosystem. I'm
+              currently taking a full stack web developer boot camp to enhance
+              my abilities as a learning designer.
+            </p>
+            <button className="bg-black rounded-md py-3 px-7 mt-6 text-white">
+              Email Me
+            </button>
+          </div>
+          <div className="max-h-96 md:h-screen">
             <img
-              class="w-screen h-screen object-cover object-top"
-              src="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              className="w-screen h-screen object-cover object-top"
+              src={profilePic}
               alt=""
             />
-          </div>
-          <div class="flex bg-gray-100 p-10">
-            <div class="mb-auto mt-auto max-w-lg">
-              <h1 class="text-3xl uppercase">Niko de Silva</h1>
-              <p class="font-semibold mb-5">Web Developer</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-                odio. Quisque volutpat mattis eros. Nullam malesuada erat ut
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit,
-                posuere a, pede.
-              </p>
-              <button class="bg-black rounded-md py-3 px-7 mt-6 text-white">
-                Email Me
-              </button>
-            </div>
           </div>
         </div>
       </div>
