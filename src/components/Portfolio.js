@@ -2,6 +2,9 @@ import Card from "./Card";
 import projectImage1 from "../assets/project-01.jpg";
 import projectImage2 from "../assets/project-02.jpg";
 import projectImage3 from "../assets/project-03.jpg";
+import projectImage4 from "../assets/project-04.jpg";
+import projectImage5 from "../assets/project-05.jpg";
+import projectImage6 from "../assets/project-06.jpg";
 
 function Portfolio() {
   return (
@@ -23,6 +26,21 @@ function Portfolio() {
         projectName="complaints department"
         projectDesc="A simple blogging platform that allows account and post creation as well as commenting. Seed data references The Boondocks."
         projectImage={projectImage3}
+      />
+      <Card
+        projectName="PWA Text Editor"
+        projectDesc="A lightweight pwa text editor using IndexedDB."
+        projectImage={projectImage4}
+      />
+      <Card
+        projectName="Note Taker"
+        projectDesc="This is a simple note taking app built using Express.js"
+        projectImage={projectImage5}
+      />
+      <Card
+        projectName="Weather Dashboard"
+        projectDesc="A simple simple weather dashboard using the OpenWeather One Call API. "
+        projectImage={projectImage6}
       />
     </div>
   );
