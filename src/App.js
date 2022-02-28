@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Resume from "./components/Resume";
+
+const getMainComponent = (currPage) => {
+  if (currPage === "Portfolio") {
+    return <Portfolio />;
+  } else if (currPage === "Resume") {
+    return <Resume />;
+  } else if (currPage === "Contact") {
+    return <Contact />;
+  }
+  return <AboutMe />;
+};
 
 function App() {
+  const [currPage, setCurrentPage] = useState("AboutMe");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center">
+      <div>
+        <Navbar setCurrentPage={setCurrentPage} />
+        <div className="w-50">{getMainComponent(currPage)}</div>
+        <Footer />
+      </div>
     </div>
   );
 }
