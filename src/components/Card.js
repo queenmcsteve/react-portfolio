@@ -1,6 +1,12 @@
 import cardImage from "../assets/image-01.jpg";
 
-function Card({ projectName, projectImage, projectDesc }) {
+function Card({
+  projectName,
+  projectImage,
+  projectDesc,
+  projectRepo,
+  projectLink,
+}) {
   return (
     <div>
       <a
@@ -18,6 +24,22 @@ function Card({ projectName, projectImage, projectDesc }) {
           </h5>
           <p className="mb-3 font-normal text-violet-700 dark:text-violet-400">
             {projectDesc}
+          </p>
+          <p className="flex space-x-5 justify-end">
+            <a
+              className="bg-transparent hover:bg-teal-500 text-teal-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
+              href={projectRepo}
+              target="_blank"
+            >
+              repo
+            </a>
+            <a
+              className="bg-transparent hover:bg-teal-500 text-teal-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
+              href={projectLink}
+              target="_blank"
+            >
+              app
+            </a>
           </p>
         </div>
       </a>
