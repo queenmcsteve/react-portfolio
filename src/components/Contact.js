@@ -1,8 +1,28 @@
-const validateEmail = (e) => {
-  console.log("email: ", e.target.value);
-};
+import { useState } from "react";
+const validator = require("email-validator");
 
 function Contact() {
+  let [msg, setMessage] = useState("");
+
+  const validateField = (e) => {
+    if (e.target.value === "") {
+      setMessage("all fields are required");
+    } else {
+      setMessage("");
+    }
+  };
+
+  const validateEmail = (e) => {
+    if (e.target.value === "") {
+      setMessage("all fields are required");
+    } else if (!validator.validate(e.target.value)) {
+      setMessage("please enter a valid email address");
+    } else {
+      setMessage("");
+    }
+    console.log("email: ", e.target.value);
+  };
+
   return (
     <div className="justify-center">
       <form className="w-full max-w-lg">
@@ -19,6 +39,8 @@ function Contact() {
               id="grid-first-name"
               type="text"
               placeholder="Steve"
+              onBlur={validateField}
+              required
             />
           </div>
           <div className="w-full md:w-1/2 px-3">
@@ -33,6 +55,8 @@ function Contact() {
               id="grid-last-name"
               type="text"
               placeholder="McSteve"
+              onBlur={validateField}
+              required
             />
           </div>
         </div>
@@ -49,7 +73,9 @@ function Contact() {
               id="email"
               type="email"
               onBlur={validateEmail}
+              required
             />
+            <p className="text-red-500 text-xs italic ">{msg}</p>
           </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -63,6 +89,8 @@ function Contact() {
             <textarea
               className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
               id="message"
+              required
+              onBlur={validateField}
             ></textarea>
           </div>
         </div>
