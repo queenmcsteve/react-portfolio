@@ -26,7 +26,7 @@ Portfolio Page:
 
 # Demo
 
-[You can see the deployed app here]()
+[You can see the deployed app here](https://queenmcsteve.github.io/react-portfolio/)
 
 # Installation
 
